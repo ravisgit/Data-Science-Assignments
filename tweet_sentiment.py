@@ -17,7 +17,8 @@ def tweet_lines(fp):
 	for i in range(len(data)):
 	    try:
 		cdata = json.loads(data[i])
-		tweets.append(cdata["text"])
+		tweets.append(cdata["text"])	
+
 		#if cdata["user"]["lang"] == "en":
 			#print i
 		#	tweets.append(cdata["text"])	

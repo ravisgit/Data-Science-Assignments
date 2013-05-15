@@ -292,18 +292,18 @@ def tweet_lines(fp):
 		    tweetscore = 0
 		    for word in line.split():		
 			try:				
-				if scores.get(word,0) != 0:
-				   if happywords.index(word) >=0: 
-					   try:
-					       allwords[statetweet] =  allwords[statetweet] + 1			
-					   except:
-					       allwords[statetweet] = 1
+#				if scores.get(word,0) != 0:
+				if happywords.index(word) >=0: 
+					try:
+				           allwords[statetweet] =  allwords[statetweet] + 1			
+					except:
+					   allwords[statetweet] = 1
 			except:
 				pass
 			
-
-	for state in sorted(allwords, key = allwords.get,reverse=True)[:10]:
-	    print state	
+	
+	for state in sorted(allwords, key = allwords.get,reverse=True):
+	    print state	+" : "+ str(allwords[state])
 
 
 def main():

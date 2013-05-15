@@ -42,6 +42,7 @@ def tweet_lines(fp):
 
 	for word in tweetsdict.keys():
 	    # print word + ":" + str(tweetsdict[word]/tweetwordcount[word])
+	     print word	
 	     pen_ult_result[word] = float(tweetsdict[word]/tweetwordcount[word])	
 	
 	for word in pen_ult_result.keys():
@@ -50,8 +51,8 @@ def tweet_lines(fp):
 	    except:
 		final_result[word] = pen_ult_result[word]
  	     
-	for word in final_result.keys():
-	    print word + " " + str(round(final_result[word],3))
+	#for word in final_result.keys():
+	#    print word + " " + str(round(final_result[word],3))
 
 def tweet_score(tweetwords,score):
 	for word in tweetwords:
